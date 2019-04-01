@@ -9,7 +9,7 @@ module.exports = {
         {
         presentTemplate: 'info',
         mobileTemplate: 'look-at-screen',
-        text: 'whatever',
+        text: 'This is Maria.',
         image: 'image.png',
       },
       {

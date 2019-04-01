@@ -44,8 +44,11 @@
 
       button.addEventListener('click', () => {
         const value = radios.findIndex(el => el.checked);
+        //if it's checked
         socket.emit('choice', value);
+        //trigger choice function, pass in the value variable
         document.getElementById('waiting').classList.add('visible');
+        //cover the radio buttons with a "waiting" screen while the players wait for everyone else 
       });
     </script>
   </body>
