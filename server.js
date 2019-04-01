@@ -44,7 +44,10 @@ app.get('/', (req, res) => {
     return;
   }
   const currentData = data[currentPath][currentStep];
-  res.render(currentData.mobileTemplate, currentData);
+  res.render(currentData.mobileTemplate, {...currentData, currentStep});
+  //when we render mobile template, going to take the template file, pass in the second paramater, which is the object created
+  //inside the template file, we can use everything we passed in, so the ... means we're taking the current 
+  //data object, making a new object that has all the keys and values from currentData, but also sticking in currentStep
 });
 
 io.on('connection', socket => {
