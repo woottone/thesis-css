@@ -8,6 +8,7 @@ const io = require('socket.io')(server);
 
 app.use(cookieParser())
 app.use('/static', express.static('static'))
+app.use('/public', express.static('public'));
 
 let currentPath = 'harris';
 //sets the current story path 
@@ -41,20 +42,16 @@ app.get('/present', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  //mobile home that you go to when you connect 
   if (!req.cookies.name) {
     res.render('new-player');
-    //starts by rendering the "new-player" screen where everyone puts in their name
     return;
   }
 
   if (!isStarted) {
     res.render('mobile-wait-for-players');
-    //once they've put in their name, if they haven't hit "start" they're sent to "mobile-wait-for-players"
     return;
   }
   const currentData = data[currentPath][currentStep];
-  //sets currentData to be whatever the current path & step is (Harris, 0)
   res.render(currentData.mobileTemplate, {...currentData, currentStep});
   //mobileTemplate is what's written in data.js
   //when we render mobile template, going to take the template file, pass in the second paramater, which is the object created
