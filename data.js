@@ -9,7 +9,7 @@ module.exports = {
         {
         presentTemplate: 'info',
         mobileTemplate: 'look-at-screen',
-        text: 'This is Maria.',
+        text: 'The next day the rest of the family comes back and they spend the day making her as comfortable as possible. <br> They hold her hand and sing her the songs that she used to sing to them as children.<br>Later that night she passes away in her sleep.',
         image: 'maria-background.jpg',
       },
       {

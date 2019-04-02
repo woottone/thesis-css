@@ -1,3 +1,30 @@
-body{
-    background-color: black;
+@font-face {
+    font-family: 'Noteworthy';
+    src: url('static/Noteworthy-Bold.ttf'); /* IE9 Compat Modes */
+  }
+
+.body{
+    margin: 0px !important;
+    overflow: none;
+}
+.container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 10% 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    border-color: black;
+}
+
+.background-img{
+    grid-column-start: 1 ;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 0;
+}
+
+.story{
+    z-index: 1;
+    font-family: 'Noteworthy';
+    font-size: 21px;
 }

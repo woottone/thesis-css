@@ -10,9 +10,11 @@
       });
     </script>
   </head>
-  <body>
-    <div style="background-image: url(static/<%= image %>)">
-      <%- text %>
-    </div>
+  <body style="background-image: url(static/<%= image %>); background-position: left top; background-size: cover;">
+    <div class="container">
+      <div class="story">
+          <%- text %>
+      </div>
+  </div>
   </body>
 </html>
